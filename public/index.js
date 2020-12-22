@@ -1,10 +1,20 @@
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("service-worker.js").then(reg => {
+      console.log("We found your service worker file!", reg);
+    });
+  });
+}
+
+
 let transactions = [];
 let myChart;
-
+console.log("anything");
 fetch('/api/transaction')
   .then((response) => response.json())
   .then((data) => {
     // save db data on global variable
+    console.log(data);
     transactions = data;
     populateTotal();
     populateTable();

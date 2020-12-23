@@ -6,6 +6,7 @@ if ("serviceWorker" in navigator) {
   });
 }
 
+console.log("party");
 
 let transactions = [];
 let myChart;

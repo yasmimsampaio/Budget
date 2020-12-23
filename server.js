@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const compression = require("compression");
 
 
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 8082;
 
 const app = express();
 
